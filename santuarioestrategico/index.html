@@ -105,8 +105,9 @@
         }
 
         .faq-item.open .faq-answer {
-            max-height: 500px;
+            max-height: 1000px;
             opacity: 1;
+            padding-bottom: 1.5rem;
         }
 
         .faq-item.open {
@@ -126,45 +127,668 @@
 </head>
 <body class="bg-off-white text-dark font-sans antialiased selection:bg-gold selection:text-white">
 
-    <!-- HERO SECTION -->
-    <header class="relative min-h-[90vh] flex items-center px-6 md:px-12 lg:px-16 overflow-hidden bg-off-white">
-        <div class="container max-w-7xl mx-auto relative z-10 w-full py-8">
-            <div class="mb-4 flex items-center gap-4 md:gap-6">
-                <div class="w-12 h-12 md:w-20 md:h-20 flex items-center justify-center">
-                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Marca%20Empreender%20Inici%C3%A1tico%20(2).png" alt="Logo" class="w-full h-full object-contain">
-                </div>
-                <h1 class="text-xl md:text-3xl font-bold title-font text-dark">Santuário Estratégico</h1>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div class="text-left relative z-20 py-8 md:py-12">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight fade-in text-dark">
-                        Recupere o governo da sua <span class="title-font text-gold">empresa</span>
-                    </h1>
-                    <p class="text-lg md:text-xl mb-8 leading-relaxed text-dark max-w-xl">
-                        Transforme <strong>instabilidade no caixa</strong>, <strong>sobrecarga emocional</strong> e <strong>caos operacional</strong> em previsibilidade, estrutura e lucro sustentável em <strong>4 meses</strong>.
-                    </p>
-                    <div class="space-y-4 mb-10">
-                        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i><span class="text-lg text-dark">Diagnóstico 360º em até 15 dias</span></div>
-                        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i><span class="text-lg text-dark">Plano Estratégico no Notion</span></div>
-                        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i><span class="text-lg text-dark">Suporte Direto via WhatsApp 24h</span></div>
+    <div class="min-h-screen">
+        <!-- HERO SECTION -->
+        <header class="relative min-h-[90vh] flex items-center px-6 md:px-12 lg:px-16 overflow-hidden bg-off-white">
+            <div class="container max-w-7xl mx-auto relative z-10 w-full py-8">
+                <!-- LOGO + NOME -->
+                <div class="mb-4 flex items-center gap-4 md:gap-6">
+                    <div class="w-12 h-12 md:w-20 md:h-20 flex items-center justify-center">
+                        <img 
+                            src="https://raw.githubusercontent.com/samnoronha/paginas/main/Marca%20Empreender%20Inici%C3%A1tico%20(2).png"
+                            alt="Marca Empreender Iniciático"
+                            class="w-full h-full object-contain"
+                        >
                     </div>
-                    <a href="https://tally.so/r/D420eR" target="_blank" class="btn-primary text-lg px-10 py-4 block sm:inline-block text-center">PREENCHER APLICAÇÃO</a>
+                    <h1 class="text-xl md:text-3xl font-bold title-font text-dark">
+                        Santuário Estratégico
+                    </h1>
                 </div>
 
-                <div class="relative z-10 flex items-end justify-center md:justify-end h-[400px] md:h-[500px] lg:h-[600px]">
-                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/fotoid1_semback.png" alt="Sam Noronha" class="h-full w-auto object-contain drop-shadow-2xl md:translate-x-4 lg:translate-x-8">
+                <!-- GRID HERO -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <!-- LEFT SIDE: TEXT -->
+                    <div class="text-left relative z-20 py-8 md:py-12">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight fade-in text-dark">
+                            Recupere o governo da sua <span class="title-font text-gold">empresa</span>
+                        </h1>
+                        <p class="text-lg md:text-xl mb-8 leading-relaxed text-dark max-w-xl">
+                            Transforme <strong>instabilidade no caixa</strong>, <strong>sobrecarga emocional</strong> e <strong>caos operacional</strong> em previsibilidade, estrutura e lucro sustentável em <strong>4 meses</strong> - respeitando a sua essência.
+                        </p>
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i>
+                                <span class="text-lg text-dark">Diagnóstico 360º em até 15 dias</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i>
+                                <span class="text-lg text-dark">Plano Estratégico Personalizado no Notion</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i>
+                                <span class="text-lg text-dark">Implementação Guiada 16 Checkpoints</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold"></i>
+                                <span class="text-lg text-dark">Suporte Direto via WhatsApp 24h</span>
+                            </div>
+                        </div>
+                        <a href="https://tally.so/r/D420eR" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-10 py-4 block sm:inline-block text-center">
+                            PREENCHER APLICAÇÃO
+                        </a>
+                    </div>
+
+                    <!-- RIGHT SIDE: IMAGE -->
+                    <div class="relative z-10 flex items-end justify-center md:justify-end h-[400px] md:h-[500px] lg:h-[600px]">
+                        <img 
+                            src="https://raw.githubusercontent.com/samnoronha/paginas/main/fotoid1_semback.png" 
+                            alt="Sam Noronha"
+                            class="h-full w-auto object-contain drop-shadow-2xl md:translate-x-4 lg:translate-x-8"
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- O resto das seções (Problema, Solução, Depoimentos, etc.) seguem a mesma estrutura... -->
-    <!-- [O código completo foi gerado e salvo no arquivo index.html do seu projeto] -->
+        <!-- PROBLEMA SEÇÃO -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-burgundy text-off-white">
+            <div class="container max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-4xl md:text-5xl mb-12 leading-tight text-white">
+                            <strong>Você já fez o que tinha que fazer.</strong>
+                        </h2>
+                        <div class="space-y-6 text-lg leading-relaxed text-white">
+                            <p>Estudou marketing, ajustou oferta, mexeu em preço, mudou estratégia, entrou em mentoria, saiu de mentoria, talvez até contratou gente.</p>
+                            <p>O negócio andou. Em alguns meses cresceu bastante. Em outros, ficou instável. E <strong>essa instabilidade nunca saiu completamente do jogo.</strong></p>
+                            
+                            <!-- Image for mobile/tablet respiro -->
+                            <div class="lg:hidden my-8 rounded-2xl overflow-hidden border-2 border-gold shadow-xl h-64">
+                                <img 
+                                    src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/frustrada.jpg" 
+                                    alt="Ilustração de Planejamento" 
+                                    class="w-full h-full object-cover object-center"
+                                >
+                            </div>
 
+                            <p>Não sabe se é pior trabalhar sozinha ou delegar porque, no fundo, <strong>você sente que só a sua mão move o negócio na direção certa.</strong> Mas está totalmente sobrecarregada.</p>
+                            <p>O crescimento trouxe mais dinheiro, mas também trouxe <strong>mais responsabilidade financeira</strong>, mais impacto em cada erro, mais gente envolvida e <strong>menos espaço para tentativa e erro.</strong></p>
+                            <p class="text-xl font-bold text-white">
+                                Então o caixa pesa na estratégia, a urgência invade o planejamento e <strong class="text-gold">nunca houve tempo para o que é importante, porque você só tem tempo de segurar as pontas.</strong>
+                            </p>
+                            <p class="text-xl text-white"><strong>Chega um ponto em que continuar assim começa a custar caro demais.</strong></p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <div class="relative rounded-3xl overflow-hidden border-4 border-gold bg-white/5 shadow-2xl h-[380px]">
+                            <img 
+                                src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/frustrada.jpg" 
+                                alt="Ilustração de Planejamento" 
+                                class="w-full h-full object-cover object-center"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUÇÃO SEÇÃO -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-white text-dark">
+            <div class="container max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl mb-8 leading-tight">
+                    O negócio <strong class="text-gold">responde ao estado da liderança.</strong>
+                </h2>
+                <p class="text-xl mb-12 leading-relaxed">Quando você oscila, a empresa oscila. Quando você decide com clareza, tudo se organiza ao redor.</p>
+                <div class="space-y-8 text-lg leading-relaxed mb-12">
+                    <p><strong class="text-gold text-xl">O Santuário Estratégico trabalha exatamente nessa interseção entre estrutura e energia.</strong></p>
+                    <p>Os resultados da empresa, sua energia e sua gestão são partes do mesmo campo. O dinheiro não é separado da forma como você vibra. A operação não é separada do seu alinhamento interno.</p>
+                    <p>No Santuário, você terá as <strong class="title-font text-gold">ferramentas e o acompanhamento</strong> para <strong>organizar o visível e o invisível do seu negócio.</strong></p>
+                    <div class="mt-10 space-y-4 p-8 rounded-xl bg-gold/10 border-l-4 border-gold">
+                        <p class="text-gold font-bold text-lg mb-6">A implementação acontece em 4 frentes integradas:</p>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-gold shrink-0"></i>
+                                <span>Diagnóstico profundo para otimizar curto prazo e estruturar longo prazo</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-gold shrink-0"></i>
+                                <span>Planejamento estratégico personalizado</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-gold shrink-0"></i>
+                                <span>Alinhamento energético e emocional da líder</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-gold shrink-0"></i>
+                                <span>Gestão como ritual diário</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-xl mt-8">Quando essa integração acontece, <strong>o negócio deixa de depender da sua tensão constante para se manter de pé.</strong></p>
+                    <p class="text-xl"><strong class="text-gold">Seu negócio se eleva de nível, e você passa a conduzir no fluxo em vez de apenas sobreviver.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-off-white">
+            <div class="container max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl mb-16 text-center">O que diz quem já contratou meus serviços:</h2>
+                
+                <!-- Vídeos de Histórias Reais -->
+                <div class="mb-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <div class="rounded-xl overflow-hidden aspect-video border-2 border-gold bg-dark shadow-xl relative">
+                                <iframe id="yt-player-1" class="w-full h-full" src="https://www.youtube.com/embed/bZyktYapgHk?controls=1&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&autoplay=0" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </div>
+                            <p class="text-dark/80 text-lg leading-relaxed px-2">
+                                <strong>Ju Guerreiro</strong> conta como um único áudio estratégico destravou um lançamento que esgotou as vagas dos seus serviços, sem investir nada em tráfego.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-xl overflow-hidden aspect-video border-2 border-gold bg-dark shadow-xl relative">
+                                <iframe id="yt-player-2" class="w-full h-full" src="https://www.youtube.com/embed/q95DZkyNbW8?controls=1&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&autoplay=0" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </div>
+                            <p class="text-dark/80 text-lg leading-relaxed px-2">
+                                <strong>Juliana Nandra e Iasmin Maionchi</strong>, dO Projeto Original, contam como meu diagnóstico e condução transformaram completamente a visão do projeto, revelou pontos cegos importantes, e deixou a empresa estruturada e a liderança muito mais segura.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-xl overflow-hidden aspect-video border-2 border-gold bg-dark shadow-xl relative">
+                                <iframe id="yt-player-3" class="w-full h-full" src="https://www.youtube.com/embed/1GtWdXy3P24?controls=1&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&autoplay=0" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </div>
+                            <p class="text-dark/80 text-lg leading-relaxed px-2">
+                                <strong>Fernando Mira</strong> (equipe de Marisol Ribeiro) conta que eu trouxe clareza estratégica, reorganizou papéis da equipe e transformou um negócio à beira da insustentabilidade em uma operação com direção e futuro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimentos em Imagem -->
+                <div>
+                    <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%201.jpeg" alt="Depoimento 1" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Até dinheiro surgiu pra quem estava me devendo. Esse movimento é MUITO poderoso"</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%204.jpg" alt="Depoimento 2" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Um dos melhores pagamentos que já fiz"</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%208.png" alt="Depoimento 3" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Você tem o poder de trazer a gente de volta a quem realmente somos"</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%2010.jpeg" alt="Depoimento 4" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Cheguei num ponto cego e bem profundo"</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%2011.jpeg" alt="Depoimento 5" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Foi como se você tivesse cortado o fio principal de uma bomba relógio dentro do meu coração"</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%2012.jpeg" alt="Depoimento 6" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Eu saí do desespero das pessoas chegarem e elas chegaram"</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid rounded-xl overflow-hidden border-2 border-gold/30 shadow-md hover:border-gold transition-all duration-300 bg-white">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%2013.jpeg" alt="Depoimento 7" class="w-full h-auto">
+                            <div class="p-4 bg-white border-t border-gold/10">
+                                <p class="text-sm italic text-dark/80 leading-relaxed font-medium">"Cada encontro encaixa tudo no lugar e ainda respeita os movimentos desses encaixes"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARA QUEM É -->
+        <section class="py-12 px-6 md:px-12 lg:px-16 bg-off-white">
+            <div class="container max-w-4xl mx-auto">
+                <div class="bg-white p-8 md:p-12 rounded-3xl border-2 border-gold/20 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -mr-16 -mt-16"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl md:text-4xl mb-8 leading-tight title-font text-burgundy">O Santuário Estratégico é para:</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-dark">
+                            <li class="flex gap-4 items-start">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+                                <span class="leading-tight">Infoprodutoras e mentoras que já faturam mas querem ir para o próximo nível</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+                                <span class="leading-tight">Empresárias que já passaram por outras mentorias mas não se sentiram vistas</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+                                <span class="leading-tight">Líderes que desejam previsibilidade no caixa e/ou estabilidade na equipe</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+                                <span class="leading-tight">Mulheres que querem crescer sem adoecer o próprio negócio</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+                                <span class="leading-tight">Empreendedoras que desejam liderar com presença, clareza e autoridade</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSFORMAÇÃO 5 FASES -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-burgundy text-white">
+            <div class="container max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl mb-16 text-center">
+                    A <span class="title-font text-white">Jornada em 5 Fases</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-start">
+                    <div class="phase-item group">
+                        <div class="text-gold font-bold text-sm md:text-lg mb-2 md:mb-3">Fase 1: Clareza</div>
+                        <p class="text-xs md:text-sm opacity-90">Você enxerga exatamente onde estão os vazamentos de energia e recursos.</p>
+                        <div class="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-0.5 bg-gold"></div>
+                    </div>
+                    <div class="phase-item group">
+                        <div class="text-gold font-bold text-sm md:text-lg mb-2 md:mb-3">Fase 2: Respiro</div>
+                        <p class="text-xs md:text-sm opacity-90">Instalamos soluções para as necessidades mais urgentes, porque o show tem que continuar.</p>
+                        <div class="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-0.5 bg-gold"></div>
+                    </div>
+                    <div class="phase-item group">
+                        <div class="text-gold font-bold text-sm md:text-lg mb-2 md:mb-3">Fase 3: Estrutura</div>
+                        <p class="text-xs md:text-sm opacity-90">Reorganizamos sua rotina para instalar processos, rotinas e rituais. O negócio deixa de depender da sua memória.</p>
+                        <div class="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-0.5 bg-gold"></div>
+                    </div>
+                    <div class="phase-item group">
+                        <div class="text-gold font-bold text-sm md:text-lg mb-2 md:mb-3">Fase 4: Previsibilidade</div>
+                        <p class="text-xs md:text-sm opacity-90">Fluxo de caixa acompanhado regularmente, metas monitoradas e decisões baseadas em dados.</p>
+                        <div class="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-0.5 bg-gold"></div>
+                    </div>
+                    <div class="phase-item group">
+                        <div class="text-gold font-bold text-sm md:text-lg mb-2 md:mb-3">Fase 5: Soberania</div>
+                        <p class="text-xs md:text-sm opacity-90">Você lidera com leveza. A empresa sustenta crescimento com margem saudável e expansão consciente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARAÇÃO -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-off-white">
+            <div class="container max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl mb-16 text-center">
+                    Por que o <span class="title-font">Santuário é diferente</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Mentorias Tradicionais -->
+                    <div class="card-light">
+                        <h3 class="text-2xl font-bold mb-6 text-dark">Mentorias Tradicionais</h3>
+                        <ul class="space-y-3 text-lg text-dark">
+                            <li>• Conteúdo padronizado</li>
+                            <li>• Estratégias fora de contexto</li>
+                            <li>• Foco excessivo em marketing</li>
+                            <li>• Pouca implementação</li>
+                            <li>• Sem análise profunda</li>
+                        </ul>
+                    </div>
+                    <!-- Consultorias Técnicas -->
+                    <div class="card-light">
+                        <h3 class="text-2xl font-bold mb-6 text-dark">Consultorias Técnicas</h3>
+                        <ul class="space-y-3 text-lg text-dark">
+                            <li>• Planilhas desconectadas</li>
+                            <li>• Foco isolado em indicadores</li>
+                            <li>• Distância da liderança</li>
+                            <li>• Pouca adaptação</li>
+                            <li>• Sem integração visão longo prazo</li>
+                        </ul>
+                    </div>
+                    <!-- Santuário -->
+                    <div class="card-burgundy">
+                        <h3 class="text-2xl font-bold mb-6 text-gold">Santuário Estratégico</h3>
+                        <ul class="space-y-3 text-lg text-white">
+                            <li><span class="text-gold">✓</span> Diagnóstico 360º completo</li>
+                            <li><span class="text-gold">✓</span> Personalização profunda</li>
+                            <li><span class="text-gold">✓</span> Implementação acompanhada</li>
+                            <li><span class="text-gold">✓</span> Integração energia + eficiência</li>
+                            <li><span class="text-gold">✓</span> Comunidade estratégica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O QUE VOCÊ RECEBE -->
+        <section class="py-20 px-6 md:px-12 lg:px-16 bg-burgundy text-off-white">
+            <div class="container max-w-5xl mx-auto">
+                <h2 class="text-4xl md:text-5xl mb-4 text-center text-off-white">O Que Você Terá Acesso</h2>
+                <p class="text-center text-xl mb-16 text-off-white">Chega de perder horas em mentorias. Receba a resolução definitiva dos seus gargalos</p>
+                <div class="space-y-6 mb-12">
+                    <div class="bg-white/10 p-8 rounded-xl border-l-4 border-gold group hover:bg-white/15 transition-all">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-16 h-16 bg-white/10 rounded-lg border-2 border-gold flex-shrink-0 flex items-center justify-center text-gold">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gold">Diagnóstico 360º</h3>
+                                <div class="w-full h-48 bg-white/10 rounded-lg border-2 border-gold overflow-hidden mb-4">
+                                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/Diagn%C3%B3stico%20360.jpeg" alt="Diagnóstico 360º" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <p class="text-base mb-2 opacity-90">Auditoria completa onde identifico onde o dinheiro e energia estão vazando. Clareza absoluta em até 15 dias.</p>
+                                <p class="text-sm text-off-white/80">Valor de Mercado: R$ 3.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-xl border-l-4 border-gold group hover:bg-white/15 transition-all">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-16 h-16 bg-white/10 rounded-lg border-2 border-gold flex-shrink-0 flex items-center justify-center text-gold">
+                                <i data-lucide="map"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gold">Plano Estratégico Personalizado</h3>
+                                <div class="w-full h-48 bg-white/10 rounded-lg border-2 border-gold overflow-hidden mb-4">
+                                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/notion.jpeg" alt="Plano Estratégico" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <p class="text-base mb-2 opacity-90">Mapa desenhado com base na sua essência e realidade do caixa. Entregue pronto no Notion. Economia de 6 meses de tentativa e erro.</p>
+                                <p class="text-sm text-off-white/80">Valor de Mercado: R$ 2.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-xl border-l-4 border-gold group hover:bg-white/15 transition-all">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-16 h-16 bg-white/10 rounded-lg border-2 border-gold flex-shrink-0 flex items-center justify-center text-gold">
+                                <i data-lucide="handshake"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gold">Implementação Guiada (16 Checkpoints)</h3>
+                                <div class="w-full h-48 bg-white/10 rounded-lg border-2 border-gold overflow-hidden mb-4">
+                                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/checkpoints.jpeg" alt="Implementação" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <p class="text-base mb-2 opacity-90">Encontros de alinhamento e rituais de gestão. Colocamos a mão na massa. Sustentação do ritmo sem deixar a peteca cair.</p>
+                                <p class="text-sm text-off-white/80">Valor de Mercado: R$ 6.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-xl border-l-4 border-gold group hover:bg-white/15 transition-all">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-16 h-16 bg-white/10 rounded-lg border-2 border-gold flex-shrink-0 flex items-center justify-center text-gold">
+                                <i data-lucide="headphones"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gold">Suporte Direto via WhatsApp</h3>
+                                <div class="w-full h-48 bg-white/10 rounded-lg border-2 border-gold overflow-hidden mb-4">
+                                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/suporte.jpg" alt="Suporte" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <p class="text-base mb-2 opacity-90">Tem um incêndio na terça? Mande um áudio. Respondo em até 24h com direção estratégica. Nunca mais travar por indecisão.</p>
+                                <p class="text-sm text-off-white/80">Valor de Mercado: R$ 6.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-xl border-l-4 border-gold group hover:bg-white/15 transition-all">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-16 h-16 bg-white/10 rounded-lg border-2 border-gold flex-shrink-0 flex items-center justify-center text-gold">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gold">Leitura Desenho Humano para Negócios</h3>
+                                <div class="w-full h-48 bg-white/10 rounded-lg border-2 border-gold overflow-hidden mb-4">
+                                    <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/santuarioestrategico/humandesign.jpg" alt="Desenho Humano" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <p class="text-base mb-2 opacity-90">Entenda como você e sua empresa podem se tornar cada vez mais magnéticas para clientes, dinheiro e oportunidades, respeitando sua essência.</p>
+                                <p class="text-sm text-off-white/80">Valor de Mercado: R$ 1.500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BÔNUS -->
+                <div class="border-t-2 border-gold pt-12">
+                    <h3 class="text-3xl font-bold mb-8 text-gold text-center">Bônus</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-gold/10 p-6 rounded-xl border-2 border-gold">
+                            <div class="text-gold font-bold text-sm uppercase mb-3">BÔNUS 1</div>
+                            <h4 class="text-lg font-bold mb-3 text-off-white">O Cofre de Implementação</h4>
+                            <p class="text-sm mb-3 text-off-white/90">Modelos prontos de processos de vendas, marketing, produtos, lançamento e gestão sob demanda para copiar e colar.</p>
+                            <p class="text-sm font-bold text-off-white">Valor: R$ 3.000 - <span class="text-gold">GRÁTIS</span></p>
+                        </div>
+                        <div class="bg-gold/10 p-6 rounded-xl border-2 border-gold">
+                            <div class="text-gold font-bold text-sm uppercase mb-3">BÔNUS 2</div>
+                            <h4 class="text-lg font-bold mb-3 text-off-white">O Clã do Fluxo</h4>
+                            <p class="text-sm mb-3 text-off-white/90">Egrégora de mulheres que falam sua língua. Acesso vitalício para nunca se sentir sozinha.</p>
+                            <p class="text-sm font-bold text-off-white">Valor: Inestimável - <span class="text-gold">GRÁTIS</span></p>
+                        </div>
+                        <div class="bg-gold/10 p-6 rounded-xl border-2 border-gold">
+                            <div class="text-gold font-bold text-sm uppercase mb-3">BÔNUS 3</div>
+                            <h4 class="text-lg font-bold mb-3 text-off-white">Doses de Presença</h4>
+                            <p class="text-sm mb-3 text-off-white/90">Áudios semanais de recalibragem energética para garantir que sua mente não sabote seu negócio.</p>
+                            <p class="text-sm font-bold text-off-white">Valor: R$ 1.000 - <span class="text-gold">GRÁTIS</span></p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-10">
+                        <p class="text-2xl font-bold text-gold">Valor Total Entregue: <span class="text-off-white">R$ 27.350+</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTIMENTO -->
+        <section class="py-20 px-6 md:px-12 lg:px-16 bg-off-white">
+            <div class="container max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="text-2xl mb-4 text-dark">Quanto custa manter uma equipe desalinhada? Quanto custa contratar errado? Quanto custa oscilar no caixa?</p>
+                    <p class="text-2xl mb-8 text-dark">Quanto custa perder margem por falta de controle? Quanto custa continuar exausta?</p>
+                    <div class="mb-8">
+                        <p class="text-xl font-bold mb-2 text-dark">Você não está investindo em mais informação.</p>
+                        <p class="text-2xl font-bold text-gold">Está instalando estrutura que impacta margem, clareza e saúde mental.</p>
+                    </div>
+                </div>
+                <!-- OFERTA -->
+                <div class="card-burgundy p-8 md:p-12 mb-8">
+                    <p class="text-lg mb-4 text-off-white/80 text-center">Exclusivamente para a Turma Fundadora:</p>
+                    <div class="mb-8 text-center">
+                        <p class="text-2xl font-bold text-gold/60 mb-2 line-through">De R$ 14.985</p>
+                        <p class="text-2xl font-bold mb-8 text-off-white">12x de <span class="text-5xl text-gold">R$ 498,50</span></p>
+                        <p class="text-xl text-off-white/70">ou R$ 4.985 à vista</p>
+                        <p class="text-base mt-4 text-off-white/90">Preço válido apenas para esta primeira turma. O valor será reajustado nas próximas edições.</p>
+                    </div>
+                    <!-- ESCASSEZ -->
+                    <div class="bg-gold/10 border-2 border-gold p-8 rounded-xl mb-10 text-center">
+                        <p class="text-lg mb-4 text-white">Não é gatilho mental, é matemática.</p>
+                        <p class="text-lg mb-4 text-white">Eu dou suporte individual via WhatsApp, faço atendimentos individuais e reviso pessoalmente os planos.</p>
+                        <p class="text-xl font-bold text-gold">Só consigo atender 8 líderes com excelência.</p>
+                        <p class="text-lg font-bold mt-4 text-white">Só restam 3 vagas nesta turma.</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://tally.so/r/D420eR" target="_blank" rel="noopener noreferrer" class="btn-primary text-xl inline-block">
+                            APLICAR PARA O SANTUÁRIO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GARANTIA -->
+        <section class="py-20 px-6 md:px-12 lg:px-16 bg-burgundy text-off-white">
+            <div class="container max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl mb-12 leading-tight text-off-white">
+                    Garantia de <span class="text-gold">Clareza Radical</span> em até 30 dias
+                </h2>
+                <div class="bg-white/10 p-10 rounded-xl border-2 border-gold relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-burgundy px-4 py-2 rounded-lg border-2 border-gold">
+                        <span class="text-gold text-xs font-bold uppercase">Garantia de 30 dias</span>
+                    </div>
+                    <p class="text-2xl font-bold mb-6 text-gold mt-2">Eu assumo o risco.</p>
+                    <p class="text-lg leading-relaxed mb-6">Entre, faça o Diagnóstico e participe por <strong>30 dias</strong>.</p>
+                    <p class="text-lg leading-relaxed">Se em um mês você não sentir que tem clareza absoluta sobre o que estava travando seu negócio e não souber exatamente o próximo passo, <strong>eu devolvo 100% do seu dinheiro.</strong></p>
+                </div>
+                <p class="text-lg font-bold text-gold mt-8">Não quero seu dinheiro se eu não puder transformar sua operação.</p>
+            </div>
+        </section>
+
+        <!-- QUEM SOU EU -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-white">
+            <div class="container max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="rounded-3xl overflow-hidden aspect-[3/4] border-8 border-off-white shadow-2xl relative z-10">
+                            <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Foto%20id2.jpeg" alt="Sam Noronha" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <div class="absolute -top-8 -left-8 w-64 h-64 bg-gold/10 rounded-full blur-3xl -z-0"></div>
+                        <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-burgundy/10 rounded-full blur-3xl -z-0"></div>
+                        <div class="absolute top-1/2 -translate-y-1/2 -right-4 w-1 h-32 bg-gold hidden lg:block"></div>
+                    </div>
+                    <div class="space-y-8">
+                        <h2 class="text-4xl md:text-6xl leading-tight">
+                            Quem Sou <span class="title-font text-gold">Eu</span>
+                        </h2>
+                        <div class="space-y-6 text-lg leading-relaxed text-dark/90">
+                            <p><strong>Sou Sam Noronha.</strong> Estrategista digital e consultora em gestão com <strong>+13 anos</strong> transformando organizações.</p>
+                            <p>Depois de 2 mestrados em duas das melhores universidades do mundo, trabalhar no alto escalão do governo mexicano e ser consultora de organizações como ONU Mulheres, Unicef e ACNUDH, migrei para o digital para empreender… e quebrei a cara.</p>
+                            <p>Fiz 7 lançamentos sozinha que mal pagaram minhas contas. Desisti do meu negócio e decidi usar minha expertise para trabalhar para outras empresas digitais.</p>
+                            <p><strong>Fui COO de empresas que faturam múltiplos 6 dígitos mensais</strong> e conquistei resultados como:</p>
+                            <ul class="space-y-3 pl-6 border-l-4 border-gold bg-off-white/50 p-6 rounded-r-xl">
+                                <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold shrink-0"></i> Redução de 41% de folha salarial</li>
+                                <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold shrink-0"></i> Crescimento anual superior a 400%</li>
+                                <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold shrink-0"></i> Recordes de vendas e redução de reembolsos</li>
+                                <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold shrink-0"></i> Estruturação completa do financeiro, contratos e governança</li>
+                            </ul>
+                            <p class="text-xl italic font-medium"><strong class="text-gold">Descobri que prosperidade sustentável não vem de técnica, vem de alinhamento energético.</strong></p>
+                            <p>Hoje <strong>guio empreendedoras e líderes a transformar suas empresas em caminhos de expansão material e espiritual.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-burgundy text-off-white">
+            <div class="container max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl mb-16 text-center text-off-white">Perguntas Frequentes</h2>
+                <div class="space-y-4">
+                    <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                        <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/20 transition-all group">
+                            <h3 class="text-xl font-bold text-gold transition-colors">Preciso ter equipe?</h3>
+                            <i data-lucide="chevron-down" class="chevron w-6 h-6 text-gold transition-all"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="px-6 pb-6 text-lg text-dark leading-relaxed">Não. Estruturamos sua realidade atual, tenha equipe ou não.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                        <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/20 transition-all group">
+                            <h3 class="text-xl font-bold text-gold transition-colors">É só papo de energia?</h3>
+                            <i data-lucide="chevron-down" class="chevron w-6 h-6 text-gold transition-all"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="px-6 pb-6 text-lg text-dark leading-relaxed">Não. É gestão estratégica aplicada. Mas se essa aplicação não tiver alinhamento energético com sua essência, podemos jogar a estratégia pela janela. Se falar de energia, crenças e 'o Divino' te deixa desconfortável, não recomendo se inscrever.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                        <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/20 transition-all group">
+                            <h3 class="text-xl font-bold text-gold transition-colors">Funciona para qualquer nicho?</h3>
+                            <i data-lucide="chevron-down" class="chevron w-6 h-6 text-gold transition-all"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="px-6 pb-6 text-lg text-dark leading-relaxed">Funciona para empresárias comprometidas com execução, independente do nicho.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                        <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/20 transition-all group">
+                            <h3 class="text-xl font-bold text-gold transition-colors">Quanto tempo preciso dedicar por semana?</h3>
+                            <i data-lucide="chevron-down" class="chevron w-6 h-6 text-gold transition-all"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="px-6 pb-6 text-lg text-dark leading-relaxed">Quanto você quiser e puder. O ritmo você é quem define. Eu te convido a decidir que sua soberania é prioridade.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                        <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/20 transition-all group">
+                            <h3 class="text-xl font-bold text-gold transition-colors">E se já fiz muitas mentorias que não funcionaram?</h3>
+                            <i data-lucide="chevron-down" class="chevron w-6 h-6 text-gold transition-all"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="px-6 pb-6 text-lg text-dark leading-relaxed">Aqui você recebe personalização profunda e acompanhamento real. Pode testar, você tem 30 dias de garantia de clareza incondicional. Mas aviso: eu não vou salvar sua empresa. Eu vou te dar suporte e ferramentas para que você descubra que é sua própria heroína.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="py-24 px-6 md:px-12 lg:px-16 bg-off-white">
+            <div class="container max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl mb-12 leading-tight">
+                    Se você sente o chamado para <span class="title-font text-gold">governar seu negócio:</span>
+                </h2>
+                <a href="https://tally.so/r/D420eR" target="_blank" rel="noopener noreferrer" class="btn-primary text-xl inline-block mb-8">
+                    QUERO GOVERNAR MINHA EMPRESA AGORA
+                </a>
+                <p class="text-lg text-dark/70">Apenas 3 vagas restantes • Primeira turma fundadora</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="py-12 px-4 text-center bg-dark text-white">
+            <div class="container max-w-4xl mx-auto">
+                <p class="text-sm mb-2">Sam Noronha © 2025</p>
+                <p class="text-xs opacity-60">Vida Intencional Gestão Empresarial Ltda. | CNPJ 51.100.401/0001-54</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
     <script>
+        // Initialize Lucide Icons
         lucide.createIcons();
-        // Lógica do FAQ e YouTube API integrada...
+
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const isOpen = item.classList.contains('open');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('open');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('open');
+            });
+        });
+
+        // YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            const playerIds = ['yt-player-1', 'yt-player-2', 'yt-player-3'];
+            playerIds.forEach(id => {
+                new YT.Player(id, {
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                });
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.setPlaybackRate(1.25);
+        }
     </script>
 </body>
 </html>
