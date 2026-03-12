@@ -1,1 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Estratégico | Sam Noronha</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#1e3d34',
+                            bg: '#f5f1ec',
+                            dark: '#181818',
+                            accent: '#a9743d',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['"Cinzel Decorative"', 'serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f5f1ec;
+            color: #181818;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-cinzel {
+            font-family: 'Cinzel Decorative', serif;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+        .faq-item.active .chevron {
+            transform: rotate(180deg);
+        }
+        .faq-item.active h3 {
+            color: #1e3d34;
+        }
+        .faq-item.active .chevron {
+            color: #1e3d34;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-montserrat selection:bg-brand-accent selection:text-white">
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-[95vh] flex items-center bg-brand-primary overflow-hidden pt-8 border-b border-brand-accent/20">
+        <div class="container max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10 w-full">
+            <div class="mb-8 flex items-center gap-4 md:gap-6">
+                <div class="w-12 h-12 md:w-20 md:h-20">
+                    <img 
+                        src="https://raw.githubusercontent.com/samnoronha/paginas/main/Marca%20Empreender%20Inici%C3%A1tico%20(2).png"
+                        alt="Logo"
+                        class="w-full h-full object-contain brightness-0 invert"
+                    >
+                </div>
+                <h1 class="text-xl md:text-3xl font-bold font-cinzel text-brand-bg">
+                    Reset Estratégico
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-left py-8 md:py-12">
+                    <div class="inline-block px-4 py-1 bg-brand-bg/10 text-brand-accent font-bold tracking-[0.3em] text-sm mb-6 uppercase">
+                        DESTRAVE | PLANEJE | EXECUTE
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-brand-bg font-cinzel">
+                        Descubra as chaves de magnetismo e prosperidade do seu <span class="text-brand-accent">negócio</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-10 leading-relaxed text-brand-bg max-w-xl">
+                        Conquiste um plano de ação alinhado com sua essência em apenas 2 sessões: saia com <strong>clareza absoluta sobre a trava principal e os próximos passos</strong> certos para elevar sua empresa ao próximo nível.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i>
+                            <span class="text-sm md:text-base text-brand-bg font-medium">Diagnóstico de Fluxo & Trava</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i>
+                            <span class="text-sm md:text-base text-brand-bg font-medium">Clareza sobre vazamentos de energia e lucro</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i>
+                            <span class="text-sm md:text-base text-brand-bg font-medium">Planejamento anual com 3 ações prioritárias</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i>
+                            <span class="text-sm md:text-base text-brand-bg font-medium">30 dias de acesso direto</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#investment" class="bg-brand-accent text-white font-bold py-4 px-10 rounded-lg inline-block text-center transition-all duration-300 hover:bg-[#8d5e2e] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(169,116,61,0.3)] uppercase tracking-wider text-lg px-10 py-5 w-full sm:w-auto">
+                        DESTRAVE SEU NEGÓCIO AGORA
+                    </a>
+                </div>
+
+                <div class="relative flex items-end justify-center h-[450px] md:h-[550px] lg:h-[700px]">
+                    <div class="absolute inset-0 bg-brand-accent/5 rounded-full blur-3xl -z-10 transform translate-y-20"></div>
+                    <img 
+                        src="https://raw.githubusercontent.com/samnoronha/paginas/main/fotoid1_semback.png" 
+                        alt="Sam Noronha"
+                        class="h-full w-auto object-contain drop-shadow-2xl"
+                    >
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- COMPARISON SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-white">
+        <div class="container max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-cinzel text-brand-primary mb-4">Por que o Reset é diferente</h2>
+                <div class="h-1 w-24 bg-brand-accent mx-auto"></div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse rounded-2xl overflow-hidden shadow-2xl">
+                    <thead>
+                        <tr class="bg-brand-dark text-white">
+                            <th class="p-6 text-left text-xl font-cinzel">Mentorias de Negócios</th>
+                            <th class="p-6 text-left text-xl font-cinzel bg-brand-primary text-brand-accent">Reset Estratégico</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-lg">
+                        <tr class="bg-brand-bg/30">
+                            <td class="p-6 border-b border-brand-accent/10 text-brand-dark/70">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="x-circle" class="w-6 h-6 text-red-800 shrink-0 mt-1"></i>
+                                    <span>Planejamento genérico que ignora quem você é</span>
+                                </div>
+                            </td>
+                            <td class="p-6 border-b border-brand-accent/10 font-bold text-brand-primary bg-brand-primary/5">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                                    <span>Planejamento construído com base em sua essência</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-6 border-b border-brand-accent/10 text-brand-dark/70">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="x-circle" class="w-6 h-6 text-red-800 shrink-0 mt-1"></i>
+                                    <span>Métodos longos que ninguém assiste</span>
+                                </div>
+                            </td>
+                            <td class="p-6 border-b border-brand-accent/10 font-bold text-brand-primary bg-brand-primary/5">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                                    <span>100% personalizado e certeiro em duas sessões individuais</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-brand-bg/30">
+                            <td class="p-6 border-b border-brand-accent/10 text-brand-dark/70">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="x-circle" class="w-6 h-6 text-red-800 shrink-0 mt-1"></i>
+                                    <span>Estratégias que dependem de força de vontade</span>
+                                </div>
+                            </td>
+                            <td class="p-6 border-b border-brand-accent/10 font-bold text-brand-primary bg-brand-primary/5">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                                    <span>Plano alinhado com sua energia, sustentável no seu ritmo</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-6 border-b border-brand-accent/10 text-brand-dark/70">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="x-circle" class="w-6 h-6 text-red-800 shrink-0 mt-1"></i>
+                                    <span>Suporte distante ou inexistente</span>
+                                </div>
+                            </td>
+                            <td class="p-6 border-b border-brand-accent/10 font-bold text-brand-primary bg-brand-primary/5">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                                    <span>30 dias de acesso direto com check-ins semanais</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-brand-bg/30">
+                            <td class="p-6 border-b border-brand-accent/10 text-brand-dark/70">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="x-circle" class="w-6 h-6 text-red-800 shrink-0 mt-1"></i>
+                                    <span>Meses de acompanhamento para sair do caos</span>
+                                </div>
+                            </td>
+                            <td class="p-6 border-b border-brand-accent/10 font-bold text-brand-primary bg-brand-primary/5">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                                    <span>2 sessões intensas + 30 dias para implementar com segurança</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-6 border-b border-brand-accent/10 text-brand-dark/70">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="x-circle" class="w-6 h-6 text-red-800 shrink-0 mt-1"></i>
+                                    <span>Foco só em números, ignorando energia</span>
+                                </div>
+                            </td>
+                            <td class="p-6 border-b border-brand-accent/10 font-bold text-brand-primary bg-brand-primary/5">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                                    <span>Integração de estratégia + gestão + alinhamento energético</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM INTRODUCTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-primary text-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl mb-12 leading-tight font-cinzel text-center">
+                    Você já sabe que não é falta de técnica.
+                </h2>
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed">
+                    <p>Se você já tentou planejamento estratégico, ajustes de marketing, consultoria de gestão, e ainda assim trabalha demais com resultados sempre distantes, saiba que não está sozinha(o): <strong>a maioria dos empreendedores relatam sensação de bloqueio mesmo com números positivos.</strong></p>
+                    
+                    <div class="bg-white/5 p-8 rounded-2xl border-l-4 border-brand-accent italic">
+                        <p class="text-2xl md:text-3xl font-cinzel mb-4">A pergunta real não é "como planejar melhor".</p>
+                        <p class="text-2xl md:text-3xl font-cinzel text-brand-accent">A pergunta é: por que tudo que você já tentou não se sustenta?</p>
+                    </div>
+
+                    <p>Porque a maioria das estratégias ignora um detalhe essencial: <strong>ninguém olhou para você.</strong></p>
+                    <p>Toda abordagem que você recebeu foi construída ignorando como você realmente funciona como líder: seu jeito de decidir, sua energia, sua forma de executar. Se o plano não conversa com isso, ele <strong>sempre</strong> morre na implementação.</p>
+                    <p class="text-2xl font-bold text-brand-accent text-center pt-4">
+                        Você está tentando forçar um modelo que não foi feito para você.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION PRESENTATION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl md:text-5xl font-cinzel text-brand-primary leading-tight">
+                        Identificar a trava que bloqueia o fluxo
+                    </h2>
+                    <p class="text-xl leading-relaxed text-brand-dark">
+                        Se a causa da distância entre trabalho e resultado é a desconexão entre <strong>quem você é e como seu negócio está estruturado</strong>, a solução não está em "mais esforço" ou "mais uma estratégia".
+                    </p>
+                    <p class="text-lg leading-relaxed text-brand-dark/80">
+                        Reset Estratégico foi criado para líderes e empreendedoras que estão cansadas de carregar o negócio nas costas e querem uma resposta rápida e precisa sobre os próximos passos.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <p class="font-bold text-brand-primary text-xl">Você vai descobrir:</p>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="zap" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span class="text-lg text-brand-dark">Os vazamentos de energia e lucro que te custam caro</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="zap" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span class="text-lg text-brand-dark">A trava principal que se repete em ciclos</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="zap" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span class="text-lg text-brand-dark">Os potenciais reais do seu negócio</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="zap" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span class="text-lg text-brand-dark">As chaves de magnetismo e prosperidade que já existem mas estão dormentes</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xl font-bold text-brand-primary pt-6">
+                        A partir daí, você sai com um planejamento estruturado e 30 dias de suporte para implementar com segurança, <strong>sem perder tempo com aulas infinitas nem de mais um ciclo de tentativa e erro.</strong>
+                    </p>
+                </div>
+                
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden border-8 border-white shadow-2xl">
+                        <img 
+                            src="https://raw.githubusercontent.com/samnoronha/paginas/main/mulher-ansiosa.png" 
+                            alt="Solução" 
+                            class="w-full h-auto"
+                        >
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-brand-accent text-white p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
+                        <p class="font-cinzel text-xl">"O negócio responde ao estado da liderança."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR WHO SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-primary text-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-cinzel mb-4">O Reset Estratégico é para você se:</h2>
+                <div class="h-1 w-24 bg-brand-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-8 rounded-2xl border border-brand-accent/30 hover:border-brand-accent transition-all group">
+                    <div class="w-12 h-12 bg-brand-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed">Empreendedora digital que já fatura mas sente que tem pontos cegos e precisa de clareza sobre o próximo passo.</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-brand-accent/30 hover:border-brand-accent transition-all group">
+                    <div class="w-12 h-12 bg-brand-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed">Líder que trabalha demais e os resultados parecem sempre distantes porque há algo travando mas você não consegue identificar.</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-brand-accent/30 hover:border-brand-accent transition-all group">
+                    <div class="w-12 h-12 bg-brand-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed">Empresária que já tentou várias abordagens e nenhuma "pegou" de verdade porque não respeitavam quem ela é.</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-brand-accent/30 hover:border-brand-accent transition-all group">
+                    <div class="w-12 h-12 bg-brand-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed">Empreendedor que valoriza suporte direto durante a implementação, não quer ficar sozinho com um plano na mão.</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-brand-accent/30 hover:border-brand-accent transition-all group">
+                    <div class="w-12 h-12 bg-brand-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="help-circle"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed">Pessoa pronta para olhar para si mesma como parte central da equação do negócio, não como vítima das circunstâncias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-white">
+        <div class="container max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-cinzel text-brand-primary mb-4">Sua Transformação</h2>
+                <div class="h-1 w-24 bg-brand-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Antes -->
+                <div class="bg-brand-bg/50 p-8 rounded-3xl border border-brand-accent/10">
+                    <h3 class="text-2xl font-cinzel text-red-900 mb-8 flex items-center gap-3">
+                        <i data-lucide="x-circle" class="w-8 h-8"></i> Antes do Reset
+                    </h3>
+                    <ul class="space-y-6 text-lg text-brand-dark/80">
+                        <li>• Você entra no mês sem saber exatamente o que é prioridade.</li>
+                        <li>• Trabalha demais, mas os resultados parecem sempre distantes.</li>
+                        <li>• Sente que há algo travando seu crescimento, mas não consegue nomear.</li>
+                        <li>• Decisões oscilam: um dia quer expandir, no outro quer sumir.</li>
+                        <li>• Você se sente invisível no próprio negócio.</li>
+                    </ul>
+                </div>
+                
+                <!-- Durante -->
+                <div class="bg-brand-primary text-brand-bg p-8 rounded-3xl shadow-2xl transform lg:-translate-y-4 border-2 border-brand-accent">
+                    <h3 class="text-2xl font-cinzel text-brand-accent mb-8 flex items-center gap-3">
+                        <i data-lucide="zap" class="w-8 h-8"></i> Durante o Reset
+                    </h3>
+                    <div class="space-y-8">
+                        <div>
+                            <p class="font-bold text-brand-accent text-sm uppercase tracking-widest mb-2">Sessão 1 (90 min)</p>
+                            <p class="font-bold text-xl mb-2">Leitura de Desenho Humano para Negócios</p>
+                            <p class="text-sm opacity-80">Identifica as chaves de prosperidade e magnetismo, vazamentos de lucro e energia. Sai com um Diagnóstico de Fluxo & Trava estruturado.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-brand-accent text-sm uppercase tracking-widest mb-2">Sessão 2 (90 min)</p>
+                            <p class="font-bold text-xl mb-2">Estratégia + Ação</p>
+                            <p class="text-sm opacity-80">Desenhamos a estratégia e o plano de ação. Orientações sobre estratégia digital e gestão. Definimos as 3 ações prioritárias.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-brand-accent text-sm uppercase tracking-widest mb-2">Acompanhamento</p>
+                            <p class="font-bold text-xl mb-2">30 Dias de Suporte</p>
+                            <p class="text-sm opacity-80">Check-ins semanais para validar implementação. Você não fica sozinha quando travar. Momentum garantido.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depois -->
+                <div class="bg-brand-bg/50 p-8 rounded-3xl border border-brand-accent/10">
+                    <h3 class="text-2xl font-cinzel text-green-900 mb-8 flex items-center gap-3">
+                        <i data-lucide="check-circle-2" class="w-8 h-8"></i> Depois do Reset
+                    </h3>
+                    <ul class="space-y-6 text-lg text-brand-dark/80">
+                        <li>• Você sabe exatamente qual é a trava principal do seu negócio.</li>
+                        <li>• Tem um plano de ação claro com 3 prioridades definidas.</li>
+                        <li>• Entende por que você funciona do jeito que funciona e como usar isso a seu favor.</li>
+                        <li>• Implementa com segurança, com suporte direto durante 30 dias.</li>
+                        <li>• Sai do ciclo de "trabalhar demais com resultados distantes".</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCESS SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-primary text-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-cinzel mb-4">O Que Você Terá Acesso</h2>
+                <p class="text-xl opacity-80">Ao entrar no Reset Estratégico, você recebe:</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-8 rounded-2xl border border-brand-accent/20 hover:bg-white/10 transition-all">
+                    <h3 class="text-xl font-bold text-brand-accent mb-4">Sessão 1: Leitura de Desenho Humano para Negócios (90 min)</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Com base no seu Desenho Humano, você vai descobrir as chaves de prosperidade e magnetismo do seu negócio, e os vazamentos de lucro e energia.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-brand-accent/20 hover:bg-white/10 transition-all">
+                    <h3 class="text-xl font-bold text-brand-accent mb-4">Sessão 2: Estratégia + Ação (90 min)</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Tenha em mãos a estratégia e o plano de ação, com todas as orientações necessárias sobre estratégia digital e gestão de negócios para alcançar os resultados desejados, e as 3 ações prioritárias para chegar lá.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-brand-accent/20 hover:bg-white/10 transition-all">
+                    <h3 class="text-xl font-bold text-brand-accent mb-4">Documentação completa do Reset</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Você terá um mapa claro dos pontos de vazamento e das alavancas do seu negócio + mapa mental detalhado da estratégia e plano de ação para consultar sempre que precisar.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-brand-accent/20 hover:bg-white/10 transition-all">
+                    <h3 class="text-xl font-bold text-brand-accent mb-4">Gravações das 2 Sessões (acesso vitalício)</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Revisitar quantas vezes precisar para absorver tudo, aprofundar aprendizados, ou compartilhar com sua equipe.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-brand-accent/20 hover:bg-white/10 transition-all md:col-span-2">
+                    <h3 class="text-xl font-bold text-brand-accent mb-4">Bônus: Acesso Direto por 30 Dias</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Disponibilidade em horário comercial via WhatsApp para check-ins semanais, tirar dúvidas sobre execução, validar decisões importantes, receber orientações pontuais quando travar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT SECTION -->
+    <section id="investment" class="py-20 px-6 md:px-12 lg:px-16 bg-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <div class="space-y-4 text-xl md:text-2xl text-brand-dark/80">
+                    <p>Quanto vale resolver a sensação de trabalhar demais com resultados distantes?</p>
+                    <p>Quanto custa um ano inteiro repetindo o mesmo ciclo?</p>
+                    <p>Quanto custa manter uma rotina que depende da sua exaustão para funcionar?</p>
+                    <p>Quanto custa decidir sempre na urgência, sem clareza sobre o impacto de cada escolha?</p>
+                </div>
+                <div class="mt-12 p-8 bg-brand-primary text-brand-bg rounded-2xl shadow-xl">
+                    <p class="text-xl md:text-2xl leading-relaxed">
+                        Resolver isso não é "mais uma linha de despesa". &nbsp; É uma intervenção cirúrgica na forma como você lidera, decide e conduz seu negócio. <span class="text-brand-accent font-bold">Em apenas 2 sessões, com 30 dias de suporte garantido.</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-brand-primary">
+                <div class="bg-brand-primary p-8 text-center text-brand-bg">
+                    <h3 class="text-2xl font-cinzel mb-2">Oferta Especial</h3>
+                    <p class="text-brand-accent font-bold tracking-widest uppercase">Reset Estratégico</p>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <div class="space-y-4 mb-10 text-brand-dark/60">
+                        <div class="flex justify-between items-center border-b border-brand-accent/10 pb-2">
+                            <span>Sessão 1: Leitura de Desenho Humano</span>
+                            <span>R$ 1.500</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-brand-accent/10 pb-2">
+                            <span>Sessão 2: Estratégia + Ação</span>
+                            <span>R$ 1.500</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-brand-accent/10 pb-2">
+                            <span>Gravações das 2 Sessões</span>
+                            <span>R$ 700</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-brand-accent/10 pb-2">
+                            <span>Acesso Direto por 30 Dias</span>
+                            <span>R$ 2.000</span>
+                        </div>
+                        <div class="flex justify-between items-center text-brand-dark font-bold pt-2">
+                            <span>Valor Total em entregáveis</span>
+                            <span class="line-through">R$ 5.700</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-10">
+                        <p class="text-brand-dark font-bold text-xl mb-2">POR APENAS</p>
+                        <p class="text-2xl md:text-4xl font-cinzel text-brand-primary mb-4 bg-brand-accent/10 py-4 rounded-xl border-2 border-brand-accent">
+                            12x DE R$ 142,77 <span class="text-base md:text-xl opacity-80">NO CARTÃO</span>
+                        </p>
+                        <p class="text-lg text-brand-dark/50">ou R$ 1.430 à vista</p>
+                        <p class="text-sm text-brand-dark/50 mt-4 uppercase tracking-widest">Exclusivamente nesta oferta especial</p>
+                    </div>
+                    
+                    <a href="https://tally.so/r/1AKekb" target="_blank" rel="noopener noreferrer" class="bg-brand-accent text-white font-bold py-4 px-10 rounded-lg inline-block text-center transition-all duration-300 hover:bg-[#8d5e2e] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(169,116,61,0.3)] uppercase tracking-wider w-full text-xl py-6">
+                        GARANTIR MINHA VAGA NO RESET
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-cinzel text-brand-primary text-center mb-16">O que diz quem já viveu essa transformação</h2>
+            
+            <!-- Video Section -->
+            <div class="max-w-4xl mx-auto mb-20">
+                <div class="aspect-video bg-brand-dark rounded-3xl border-4 border-brand-accent shadow-2xl overflow-hidden">
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/bZyktYapgHk" 
+                        title="Depoimento Ju Guerreiro" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                    ></iframe>
+                </div>
+                <p class="mt-6 text-center text-lg md:text-xl text-brand-primary font-medium italic max-w-2xl mx-auto">
+                    "Ju Guerreiro conta como um único áudio estratégico destravou um lançamento que esgotou as vagas dos seus serviços, sem investir nada em tráfego."
+                </p>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div class="break-inside-avoid bg-white p-4 rounded-2xl shadow-lg border border-brand-accent/10 flex flex-col mb-6 hover:-translate-y-1 transition-transform">
+                    <div class="rounded-xl overflow-hidden mb-4 border border-brand-bg shadow-inner">
+                        <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%201.jpeg" alt="Depoimento 1" class="w-full h-auto object-cover">
+                    </div>
+                    <p class="text-brand-dark/80 italic text-center px-2">"Até dinheiro surgiu pra quem estava me devendo. Esse movimento é MUITO poderoso"</p>
+                </div>
+                <div class="break-inside-avoid bg-white p-4 rounded-2xl shadow-lg border border-brand-accent/10 flex flex-col mb-6 hover:-translate-y-1 transition-transform">
+                    <div class="rounded-xl overflow-hidden mb-4 border border-brand-bg shadow-inner">
+                        <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%203.jpeg" alt="Depoimento 2" class="w-full h-auto object-cover">
+                    </div>
+                    <p class="text-brand-dark/80 italic text-center px-2">"a sensação de estar no caminho certo, uma confiança diferente"</p>
+                </div>
+                <div class="break-inside-avoid bg-white p-4 rounded-2xl shadow-lg border border-brand-accent/10 flex flex-col mb-6 hover:-translate-y-1 transition-transform">
+                    <div class="rounded-xl overflow-hidden mb-4 border border-brand-bg shadow-inner">
+                        <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%206.jpg" alt="Depoimento 3" class="w-full h-auto object-cover">
+                    </div>
+                    <p class="text-brand-dark/80 italic text-center px-2">"senti que o objetivo já estava se concretizando"</p>
+                </div>
+                <div class="break-inside-avoid bg-white p-4 rounded-2xl shadow-lg border border-brand-accent/10 flex flex-col mb-6 hover:-translate-y-1 transition-transform">
+                    <div class="rounded-xl overflow-hidden mb-4 border border-brand-bg shadow-inner">
+                        <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%207.png" alt="Depoimento 4" class="w-full h-auto object-cover">
+                    </div>
+                    <p class="text-brand-dark/80 italic text-center px-2">"Minha cabeça ficou a mil depois que conversamos"</p>
+                </div>
+                <div class="break-inside-avoid bg-white p-4 rounded-2xl shadow-lg border border-brand-accent/10 flex flex-col mb-6 hover:-translate-y-1 transition-transform">
+                    <div class="rounded-xl overflow-hidden mb-4 border border-brand-bg shadow-inner">
+                        <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%2014.jpeg" alt="Depoimento 5" class="w-full h-auto object-cover">
+                    </div>
+                    <p class="text-brand-dark/80 italic text-center px-2">"Seu trabalho tem transformado minha vida, Sam"</p>
+                </div>
+                <div class="break-inside-avoid bg-white p-4 rounded-2xl shadow-lg border border-brand-accent/10 flex flex-col mb-6 hover:-translate-y-1 transition-transform">
+                    <div class="rounded-xl overflow-hidden mb-4 border border-brand-bg shadow-inner">
+                        <img src="https://raw.githubusercontent.com/samnoronha/paginas/main/Depoimento%2015.jpeg" alt="Depoimento 6" class="w-full h-auto object-cover">
+                    </div>
+                    <p class="text-brand-dark/80 italic text-center px-2">"Ainda estou impactada com a leitura... Mal sei como te agradecer por tamanha clareza"</p>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <a href="https://tally.so/r/1AKekb" target="_blank" rel="noopener noreferrer" class="bg-brand-accent text-white font-bold py-4 px-10 rounded-lg inline-block text-center transition-all duration-300 hover:bg-[#8d5e2e] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(169,116,61,0.3)] uppercase tracking-wider">QUERO MEU RESET ESTRATÉGICO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-primary text-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block p-4 bg-brand-accent text-white rounded-full mb-8">
+                    <i data-lucide="shield-check" class="w-12 h-12"></i>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-cinzel mb-8 leading-tight">Garantia</h2>
+                
+                <div class="bg-white/10 p-8 md:p-12 rounded-3xl border-2 border-brand-accent relative">
+                    <p class="text-xl md:text-2xl leading-relaxed mb-8">
+                        Se após a primeira sessão e o check-in de 7 dias você não tiver clareza absoluta sobre:
+                    </p>
+                    <ul class="text-left max-w-2xl mx-auto space-y-4 mb-10 text-lg md:text-xl">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span>A trava principal que bloqueia seu negócio</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span>O próximo passo certo a tomar</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-accent shrink-0 mt-1"></i>
+                            <span>O alinhamento verdadeiro entre sua essência e seu negócio</span>
+                        </li>
+                    </ul>
+                    <p class="text-2xl md:text-3xl font-bold text-brand-accent mb-4 uppercase tracking-widest">
+                        Devolvemos 100% do seu investimento, sem perguntas.
+                    </p>
+                    <p class="text-xl opacity-80">Eu confio no que entrego. E você merece confiar também.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-white">
+        <div class="container max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden aspect-[3/4] border-8 border-brand-bg shadow-2xl relative z-10">
+                        <img 
+                            src="https://raw.githubusercontent.com/samnoronha/paginas/main/Foto%20id2.jpeg" 
+                            alt="Sam Noronha" 
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        >
+                    </div>
+                    <div class="absolute -top-8 -left-8 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -z-0"></div>
+                    <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl -z-0"></div>
+                </div>
+                
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-6xl font-cinzel text-brand-primary leading-tight">
+                        Quem Sou <span class="text-brand-accent">Eu</span>
+                    </h2>
+                    <div class="space-y-6 text-lg leading-relaxed text-brand-dark/90">
+                        <p><strong>Sou Sam Noronha.</strong> Estrategista digital e consultora em gestão com +13 anos transformando organizações.</p>
+                        <p>Depois de 2 mestrados em duas das melhores universidades do mundo, trabalhar no alto escalão do governo mexicano e ser consultora de organizações como ONU Mulheres, Unicef e ACNUDH, migrei para o digital para empreender… e quebrei a cara.</p>
+                        <p>Fiz 7 lançamentos sozinha que mal pagaram minhas contas. Desisti do meu negócio e decidi usar minha expertise para trabalhar para outras empresas digitais.</p>
+                        <p><strong>Fui COO de empresas que faturam múltiplos 6 dígitos mensais</strong> e conquistei resultados como:</p>
+                        <ul class="space-y-3 pl-6 border-l-4 border-brand-accent bg-brand-bg/50 p-6 rounded-r-xl">
+                            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i> Redução de 41% de folha salarial</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i> Crescimento anual superior a 400%</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i> Recordes de vendas e redução de reembolsos</li>
+                            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0"></i> Estruturação completa do financeiro, contratos e governança</li>
+                        </ul>
+                        <p class="text-xl italic font-medium text-brand-primary">
+                            "Descobri que prosperidade sustentável não vem de técnica, vem de alinhamento energético."
+                        </p>
+                        <p>Hoje guio empreendedoras e líderes a transformar suas empresas em caminhos de expansão material e espiritual.</p>
+                        <p class="font-bold text-brand-primary">Sua empresa é seu templo. Você vem?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-primary text-brand-bg">
+        <div class="container max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl mb-16 text-center text-white font-cinzel">Perguntas Frequentes</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition-all group">
+                        <h3 class="text-xl font-bold transition-colors text-brand-accent">Já tentei planejamento antes e não funcionou. Por que isso seria diferente?</h3>
+                        <i data-lucide="chevron-down" class="chevron w-6 h-6 text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="px-6 pb-6 text-lg text-brand-dark leading-relaxed">Porque aqui não tem modelo pronto. Tem você, seu mapa, seu contexto e seu negócio no centro da mesa. A maioria dos planejamentos ignora quem você é. É por isso que não se sustentam. Aqui, tudo é construído ao redor de como você realmente funciona.</p>
+                    </div>
+                </div>
+                <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition-all group">
+                        <h3 class="text-xl font-bold transition-colors text-brand-accent">Quanto tempo preciso dedicar além das 2 sessões?</h3>
+                        <i data-lucide="chevron-down" class="chevron w-6 h-6 text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="px-6 pb-6 text-lg text-brand-dark leading-relaxed">Você terá 2 encontros de 90 minutos cada. A implementação do plano depende do ritmo que você escolher sustentar. O Reset não te coloca em uma máquina de produtividade; ele te ajuda a decidir, com consciência, onde colocar sua energia.</p>
+                    </div>
+                </div>
+                <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition-all group">
+                        <h3 class="text-xl font-bold transition-colors text-brand-accent">E se eu não conseguir implementar tudo?</h3>
+                        <i data-lucide="chevron-down" class="chevron w-6 h-6 text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="px-6 pb-6 text-lg text-brand-dark leading-relaxed">Por isso temos 30 dias de suporte direto. Você não fica sozinha. Fazemos check-ins semanais, validamos decisões, e orientamos quando você travar. O objetivo é que você saia do Reset com momentum.</p>
+                    </div>
+                </div>
+                <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition-all group">
+                        <h3 class="text-xl font-bold transition-colors text-brand-accent">Funciona para qualquer nicho?</h3>
+                        <i data-lucide="chevron-down" class="chevron w-6 h-6 text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="px-6 pb-6 text-lg text-brand-dark leading-relaxed">Funciona para líderes comprometidas com execução, independente do nicho. O que importa é: você está disposta a olhar para si mesma como parte central da equação do negócio? Se a resposta for sim, o Reset tem base para funcionar.</p>
+                    </div>
+                </div>
+                <div class="faq-item rounded-xl overflow-hidden transition-all duration-300 bg-white/10">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition-all group">
+                        <h3 class="text-xl font-bold transition-colors text-brand-accent">Quantas vagas tem?</h3>
+                        <i data-lucide="chevron-down" class="chevron w-6 h-6 text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="px-6 pb-6 text-lg text-brand-dark leading-relaxed">Apenas 3 vagas por mês, para garantir a qualidade do suporte e a disponibilidade que prometo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="py-20 px-6 md:px-12 lg:px-16 bg-brand-bg text-center">
+        <div class="container max-w-7xl mx-auto">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-cinzel text-brand-primary mb-8 leading-tight">
+                    Se você sente o chamado para <span class="text-brand-accent">governar seu negócio:</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-12 text-brand-dark/70 italic">
+                    Se você se viu nessa página… se aquele incômodo de 'trabalhar demais com resultados distantes' é familiar… o próximo passo é simples.
+                </p>
+                <a href="https://tally.so/r/1AKekb" target="_blank" rel="noopener noreferrer" class="bg-brand-accent text-white font-bold py-4 px-10 rounded-lg inline-block text-center transition-all duration-300 hover:bg-[#8d5e2e] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(169,116,61,0.3)] uppercase tracking-wider text-xl px-12 py-6 mb-8">
+                    QUERO DESTRAVAR MEU NEGÓCIO COM O RESET
+                </a>
+                <p class="text-brand-accent font-bold tracking-widest uppercase">
+                    Apenas 3 vagas por mês • Momentum garantido
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-4 text-center bg-brand-dark text-white">
+        <div class="container max-w-4xl mx-auto">
+            <p class="text-sm mb-2">Sam Noronha © 2025</p>
+            <p class="text-xs opacity-60">Vida Intencional Gestão Empresarial Ltda. | CNPJ 51.100.401/0001-54</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // FAQ Interactivity
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.style.backgroundColor = 'white';
+                    item.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                } else {
+                    item.classList.remove('active');
+                    item.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    item.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
